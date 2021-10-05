@@ -1,22 +1,19 @@
 ## Template description
 
 The **umich-labs-template** is a starting point for a research laboratory's or project's 
-[GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
-using the [umich-labs](https://github.com/wilsonte-umich/umich-labs) Jekyll theme.
+[GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) 
+web site using the [umich-labs](https://github.com/wilsonte-umich/umich-labs) Jekyll theme.
 
-This template uses a permanent fork of the [petridish](https://github.com/peterdesmet/petridish) theme, 
-with extensive modifications from that base but with an overall similar structure and feel.
+This template uses a permanent fork of the [petridish](https://github.com/peterdesmet/petridish) theme, with extensive modifications from that base but with an overall similar structure and feel.
 
 ## Template usage
 
 ### Create a new repository from this template
 
-From this template's repository on GitHub, click the big, green button 
-labeled "Use this template". You will be prompted for the user and name
-of the repository you would like to create and fill using this template.
+**To get started quickly**, [click here to create a new repository from this template](https://github.com/wilsonte-umich/umich-labs-template/generate).
 
-HINT: we recommend that you use 'USER_NAME.github.io' as the name of your
-repository, e.g., to create repository https://github.com/USER_NAME/USER_NAME.github.io.
+You will be prompted for the user and name of the repository you would like to create.
+We recommend that you use 'USER_NAME.github.io' as the name of your repository, e.g., to create repository https://github.com/USER_NAME/USER_NAME.github.io.
 That way, your web site will be available through the URL https://USER_NAME.github.io.
   
 ### Activate your web page on github.io
@@ -29,9 +26,9 @@ Activate your new web site for loading via github.io as follows:
 - edit the "Source" to be branch 'main' and folder '/root'
 - click 'Save'
   
-After about a minute, your site will be live at the link indicated on the
-Settings / Pages page.  It will track your respository to keep your site up
-to date whenever you push or merge changes into the 'main' branch.
+After a minute or two, your site will be live at the link indicated on
+Settings / Pages.  It will track your respository to keep your site up
+to date whenever you push or merge content changes into the 'main' branch.
 
 You can edit files directly within GitHub, or by cloning the repository
 to your local computer and editing and pushing changes from there.
@@ -45,7 +42,7 @@ regarding which specific lines you should edit to match your needs:
 - _data/footer.yml
 - _data/navigation.yml
 - LICENSE (to add your name on the Copyright line)
-- README.md (to delete these instructions, if desired)
+- README.md (to replace these instructions, if desired)
 
 ### Write your web site's contents
 
@@ -59,7 +56,7 @@ As an alternative to editing files in this repository directly,
 consider using the 
 [umich-labs-cms](https://github.com/wilsonte-umich/umich-labs-cms)
 Content Management System (CMS) to 
-make editing your sites contents a bit easier via an R Shiny web page.
+make editing your site's contents a bit easier via an R Shiny web tool.
 
 ## License
 
