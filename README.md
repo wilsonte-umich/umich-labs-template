@@ -39,8 +39,8 @@ Open and edit the following files, following the instructions in the comments
 regarding which specific lines you should edit to match your needs:
 
 - _config.yml
-- _data/footer.yml
-- _data/navigation.yml
+- _data/base/footer.yml
+- _data/base/navigation.yml
 - LICENSE (to add your name on the Copyright line)
 - README.md (to replace these instructions, if desired)
 
