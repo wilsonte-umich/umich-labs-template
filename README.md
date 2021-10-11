@@ -4,7 +4,7 @@ The **umich-labs-template** is a starting point for a research laboratory's or p
 [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) 
 web site using the [umich-labs](https://github.com/wilsonte-umich/umich-labs) Jekyll theme.
 
-This template uses a permanent fork of the [petridish](https://github.com/peterdesmet/petridish) theme, with extensive modifications from that base but with an overall similar structure and feel.
+This template uses a permanent fork of the [petridish](https://github.com/peterdesmet/petridish) theme, with extensive modifications from that base but with an overall similar look and feel.
 
 ## Template usage
 
