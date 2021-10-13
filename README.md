@@ -31,7 +31,7 @@ Settings / Pages.  It will track your respository to keep your site up
 to date whenever you push or merge content changes into the 'main' branch.
 
 You can edit files directly within GitHub, or by cloning the repository
-to your local computer and editing and pushing changes from there.
+to your local computer and editing and pushing changes from there (see below).
 
 ### Configure your new repository's basic information
 
@@ -44,19 +44,35 @@ regarding which specific lines you should edit to match your needs:
 - LICENSE (to add your name on the Copyright line)
 - README.md (to replace these instructions, if desired)
 
-### Write your web site's contents
+### Write/update your web site's contents
 
 Explore and edit all of the files within
 your new repo. They create the contents of your web page (the
 programming underlying the web site is provided by the umich-labs theme).
 
+Because of the straighforward file structure, we encourage you to do
+most editing of your website in the 
+[Visual Studio Code](https://code.visualstudio.com/)
+editor. The basic steps are:
+
+- install VS Code
+- [clone your site's repository](https://code.visualstudio.com/docs/editor/github)
+- find the files in the file tree and edit them as you would any file
+- use the Preview function to view and proofread your rendered markdown (note: styles won't match)
+- when happy, push your changes back to GitHub
+
+GitHub will automatically rebuild our site whenever you push changes to it.
+
 ### Using the umich-labs content management system
 
-As an alternative to editing files in this repository directly,
-consider using the 
-[umich-labs-cms](https://github.com/wilsonte-umich/umich-labs-cms)
-Content Management System (CMS) to 
-make editing your site's contents a bit easier via an R Shiny web tool.
+In addition to the basic content editing steps above, there are a few tasks where some interactive helpers make life easier. These are encapsulated into
+a minimal content management system (CMS) that is built into your new site. The CMS is R-based and easily accessed within VS Code:
+
+- make sure you have installed on your computer
+- install the R Extension into VS Code (the one by Yuki Ueda)
+- open file /cms.R in VS Code
+- find the triangular "play" icon at the top of the page to run the cms.R script
+- use the tools in the browser window that opens within VS Code (see instructions in the web page)
 
 ## License
 
