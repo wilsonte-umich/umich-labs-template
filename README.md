@@ -4,7 +4,7 @@ The **umich-labs-template** is a starting point for a research laboratory's or p
 [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) 
 web site using the [umich-labs](https://github.com/wilsonte-umich/umich-labs) Jekyll theme.
 
-This template uses a permanent fork of the [petridish](https://github.com/peterdesmet/petridish) theme, with extensive modifications from that base but with an overall similar look and feel.
+This template uses a permanent fork of the [petridish](https://github.com/peterdesmet/petridish) theme, with extensive modifications from that base but with a similar look and feel.
 
 ## Template usage
 
@@ -27,7 +27,7 @@ Activate your new web site for loading via github.io as follows:
 - click 'Save'
   
 After a minute or two, your site will be live at the link indicated on
-Settings / Pages.  It will track your respository to keep your site up
+Settings / Pages.  It will track your repository to keep your site up
 to date whenever you push or merge content changes into the 'main' branch.
 
 You can edit files directly within GitHub, or by cloning the repository
@@ -50,7 +50,7 @@ Explore and edit all of the files within
 your new repo. They create the contents of your web page (the
 programming underlying the web site is provided by the umich-labs theme).
 
-Because of the straighforward file structure, we encourage you to do
+Because of the straightforward file structure, we encourage you to do
 most editing of your website in the 
 [Visual Studio Code](https://code.visualstudio.com/)
 editor. The basic steps are:
@@ -58,7 +58,7 @@ editor. The basic steps are:
 - install VS Code
 - [clone your site's repository](https://code.visualstudio.com/docs/editor/github)
 - find the files in the file tree and edit them as you would any file
-- use the Preview function to view and proofread your rendered markdown (note: styles won't match)
+- use the Preview function to view and proofread your rendered markdown
 - when happy, push your changes back to GitHub
 
 GitHub will automatically rebuild our site whenever you push changes to it.
@@ -68,11 +68,13 @@ GitHub will automatically rebuild our site whenever you push changes to it.
 In addition to the basic content editing steps above, there are a few tasks where some interactive helpers make life easier. These are encapsulated into
 a minimal content management system (CMS) that is built into your new site. The CMS is R-based and easily accessed within VS Code:
 
-- make sure you have installed on your computer
+- make sure you have installed R on your computer
 - install the R Extension into VS Code (the one by Yuki Ueda)
 - open file /cms.R in VS Code
 - find the triangular "play" icon at the top of the page to run the cms.R script
 - use the tools in the browser window that opens within VS Code (see instructions in the web page)
+
+The first time you use the CMS you will need to wait for various R packages to be installed.
 
 ## License
 

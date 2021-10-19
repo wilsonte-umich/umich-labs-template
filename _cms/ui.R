@@ -25,30 +25,43 @@ imagesUI <- function(...){
             tags$li("You may need to reload this browser."),
             tags$li("Copy the file path into 'card_image' or other image tag.")
         ),
-        box(
+        column(
             width = 7,
-            title = "File Selector",
-            status = 'primary',
-            solidHeader = TRUE,
-            collapsible = TRUE,
-            # custom search box
-            shinyTree(
-                "fileTree",
-                checkbox = FALSE,
-                search = FALSE,
-                searchtime = 250,
-                dragAndDrop = FALSE,
-                types = NULL,
-                theme = "default",
-                themeIcons = FALSE,
-                themeDots = TRUE,
-                sort = FALSE,
-                unique = FALSE,
-                wholerow = TRUE,
-                stripes = FALSE,
-                multiple = FALSE,
-                animation = 200,
-                contextmenu = FALSE
+            box(
+                width = 12,
+                title = "File Selector",
+                status = 'primary',
+                solidHeader = TRUE,
+                collapsible = TRUE,
+                # custom search box
+                shinyTree(
+                    "fileTree",
+                    checkbox = FALSE,
+                    search = FALSE,
+                    searchtime = 250,
+                    dragAndDrop = FALSE,
+                    types = NULL,
+                    theme = "default",
+                    themeIcons = FALSE,
+                    themeDots = TRUE,
+                    sort = FALSE,
+                    unique = FALSE,
+                    wholerow = TRUE,
+                    stripes = FALSE,
+                    multiple = FALSE,
+                    animation = 200,
+                    contextmenu = FALSE
+                )
+            ),
+            box(
+                width = 12,
+                title = "Adjusted Image",
+                status = 'primary',
+                solidHeader = TRUE,
+                textInput('adjustedFileName', 'Output File Path (!! do NOT include assets/images or .jpg !!)', ''),
+                textOutput('adjustedImageSize'),
+                actionButton('saveAdjustedImage', 'Save Image'),
+                imageOutput('adjustedImage')
             )
         ),
         box(
@@ -58,7 +71,24 @@ imagesUI <- function(...){
             solidHeader = TRUE,
             textInput('imagePathCopy', '', ''),
             textOutput('imageSize'),
-            imageOutput('selectedImage')
+            selectInput('imageType', 'Image Type', choices = c(
+                'person_150_150',
+                'banner_800',
+                'banner_1200'
+            )),
+            imageOutput(
+                'selectedImage', 
+                height = '800px',
+                brush = brushOpts(
+                    id = 'imageBrush', 
+                    fill = "#9cf", 
+                    stroke = "#036",
+                    opacity = 0.25, 
+                    delay = 300, 
+                    clip = FALSE,
+                    resetOnNew = TRUE
+                )
+            )
         )
     )
 }
@@ -123,8 +153,9 @@ ui <- function(...){
         ),
         dashboardSidebar(
             sidebarMenu(id = "sidebarMenu",  
+                getTabMenuItem('images', 'Images'),             
                 getTabMenuItem('badges', 'Badges'),
-                getTabMenuItem('images', 'Images'),                  
+                 
                 getTabMenuItem('pubmed', 'Import Pubmed')      
             ),
             # htmlHeadElements(), # yes, place the <head> content here (even though it seems odd)
