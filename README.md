@@ -48,7 +48,11 @@ regarding which specific lines you should edit to match your needs:
 
 Explore and edit all of the files within
 your new repo. They create the contents of your web page (the
-programming underlying the web site is provided by the umich-labs theme).
+programming underlying the web site is provided by the umich-labs theme). Briefly:
+- the '_data' folder carries lists of people, publications, etc.
+- the 'assets/images' folder is where you should put images
+- the 'content' folder is where you write expanded pages for individual projects, posts, etc.
+- the 'pages' folder is where you create the constant content for different page types
 
 Because of the straightforward file structure, we encourage you to do
 most editing of your website in the 
@@ -59,22 +63,75 @@ editor. The basic steps are:
 - [clone your site's repository](https://code.visualstudio.com/docs/editor/github)
 - find the files in the file tree and edit them as you would any file
 - use the Preview function to view and proofread your rendered markdown
-- when happy, push your changes back to GitHub
+- push your changes back to GitHub
 
 GitHub will automatically rebuild our site whenever you push changes to it.
 
+### A few markdown basics and Jekyll support functions
+
+Editing site content in markdown is quite easy. First, 
+pages require Jekyll "front matter" as YAML content between the '---' markers
+at the top of the file. README files will help you see what information is expected.
+
+https://www.google.com/search?q=simple+yaml
+
+```
+---
+title: xxx
+---
+```
+
+Otherwise, page content is mostly just typed as text, with a few simple markdown tags
+providing headings, links, and highlights (see template files for examples).  
+
+https://www.markdownguide.org/basic-syntax/
+
+```
+### Heading Level 3
+#### Heading Level 4
+
+**Bold Text**
+_Italic Text_
+
+- list item 1
+- list item 2
+
+[Link Text](http://link.to.site)
+![Image Text](http://path.to.image)
+![Image Text]({{ assets/images/xyz.jpg | relative_url }})
+```
+
+The last example above uses Jekyll Liquid syntax to call the 'relative_url' function for an image added to the assets/images folder. In addition, the umich-labs theme provides a few other Liquid helpers. The following will include a citation as a link to a PubMed search ('search' might be text or a PMID):
+
+```
+... as shown by Wilson {% include citation.html search="xyz" %}.
+```
+
+The following will include a responsive figure panel with a border, caption and image:
+
+```
+{% include figure.html  
+    image="assets/images/xyz.jpg"
+    title="Figure Title"
+    caption="Figure caption text."
+%}
+```
+
 ### Using the umich-labs content management system
 
-In addition to the basic content editing steps above, there are a few tasks where some interactive helpers make life easier. These are encapsulated into
-a minimal content management system (CMS) that is built into your new site. The CMS is R-based and easily accessed within VS Code:
+In addition to the basic content editing steps above, there are a few tasks where interactive helpers make life easier. These are encapsulated into
+a minimal content management system (CMS) built into your new site. The CMS is R-based and easily accessed within VS Code:
 
 - make sure you have installed R on your computer
 - install the R Extension into VS Code (the one by Yuki Ueda)
 - open file /cms.R in VS Code
 - find the triangular "play" icon at the top of the page to run the cms.R script
-- use the tools in the browser window that opens within VS Code (see instructions in the web page)
+- use the tools in the browser window that opens (see instructions in the web page) that will help you
+    - make links between items
+    - edit images (crop and resize to small files)
+    - import publications from PubMed
 
-The first time you use the CMS you will need to wait for various R packages to be installed.
+The first time you use the CMS you will need to wait for various R packages to be installed. 
 
 ## License
 
