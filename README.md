@@ -15,7 +15,7 @@ This template uses a permanent fork of the [petridish](https://github.com/peterd
 You will be prompted for the user and name of the repository you would like to create.
 We recommend that you use 'USER_NAME.github.io' as the name of your repository, e.g., to create repository https://github.com/USER_NAME/USER_NAME.github.io.
 That way, your web site will be available through the URL https://USER_NAME.github.io.
-  
+
 ### Activate your web page on github.io
   
 Activate your new web site for loading via github.io as follows:
@@ -30,32 +30,32 @@ After a minute or two, your site will be live at the link indicated on
 Settings / Pages.  It will track your repository to keep your site up
 to date whenever you push or merge content changes into the 'main' branch.
 
-You can edit files directly within GitHub, or by cloning the repository
-to your local computer and editing and pushing changes from there (see below).
+### Clone your site repo locally
 
-### Configure your new repository's basic information
+Clone the repository to your local computer - you will edit and pushing changes from there (see below).
 
-Open and edit the following files, following the instructions in the comments
-regarding which specific lines you should edit to match your needs:
+### Use the umich-labs Content Management System
 
-- _config.yml
-- _data/base/footer.yml
-- _data/base/navigation.yml
-- LICENSE (to add your name on the Copyright line)
-- README.md (to replace these instructions, if desired)
+The easiest way to change the content of your site is to use the R Shiny-based content management system (CMS) built into your new site. 
+The CMS is easily activated by:
 
-### Write/update your web site's contents
+- running either the `run_cms.bat` or `run_cms.sh` script by double-clicking it on your local computer clone
+- point any web browser to http://localhost:8000/
+- use the tools in the browser window, following the instructions in the web page
 
-Explore and edit all of the files within
-your new repo. They create the contents of your web page (the
-programming underlying the web site is provided by the umich-labs theme). Briefly:
+The first time you use the CMS you will need to wait for various R packages to be installed. 
+
+### Manually update your web site's contents
+
+You can also manually explore and edit all of the files within
+your new repo clone. They create the contents of your web page. Briefly:
 - the '_data' folder carries lists of people, publications, etc.
 - the 'assets/images' folder is where you should put images
 - the 'content' folder is where you write expanded pages for individual projects, posts, etc.
 - the 'pages' folder is where you create the constant content for different page types
 
 Because of the straightforward file structure, we encourage you to do
-most editing of your website in the 
+any manual editing of your website in the 
 [Visual Studio Code](https://code.visualstudio.com/)
 editor. The basic steps are:
 
@@ -66,6 +66,23 @@ editor. The basic steps are:
 - push your changes back to GitHub
 
 GitHub will automatically rebuild our site whenever you push changes to it.
+
+Even if you mainly use the CMS for site editing, you will need some method
+like VS Code, or GitBash, etc., to push changes to GitHub.
+
+### Configure your new repository's basic information
+
+Open and edit the following files, following the instructions in the comments
+regarding which specific lines you should edit to match your needs.  
+
+As with all files that define your site, you can edit them using the CMS
+or manually, whatever suits you.
+
+- _config.yml
+- _data/base/footer.yml
+- _data/base/navigation.yml
+- LICENSE (to add your name on the Copyright line)
+- README.md (to replace these instructions, if desired)
 
 ### A few markdown basics and Jekyll support functions
 
@@ -116,22 +133,6 @@ The following will include a responsive figure panel with a border, caption and 
     caption="Figure caption text."
 %}
 ```
-
-### Using the umich-labs content management system
-
-In addition to the basic content editing steps above, there are a few tasks where interactive helpers make life easier. These are encapsulated into
-a minimal content management system (CMS) built into your new site. The CMS is R-based and easily accessed within VS Code:
-
-- make sure you have installed R on your computer
-- install the R Extension into VS Code (the one by Yuki Ueda)
-- open file /cms.R in VS Code
-- find the triangular "play" icon at the top of the page to run the cms.R script
-- use the tools in the browser window that opens (see instructions in the web page) that will help you
-    - make links between items
-    - edit images (crop and resize to small files)
-    - import publications from PubMed
-
-The first time you use the CMS you will need to wait for various R packages to be installed. 
 
 ## License
 
