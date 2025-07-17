@@ -31,6 +31,6 @@
   title: Systematic Genetic Analysis of Yeast NHEJ
   description: The goals of this project are probably not relevant to the Doe laboratory!
   badges:
-    - project=project1
-    - resource=cell_protocol
-    - publication=bazzano_2021
+    - project=Research_Project_1
+    - resource=Cell_Prep_Protocol
+    - publication=Bazzano_2021

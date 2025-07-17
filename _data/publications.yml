@@ -27,7 +27,7 @@
 #   badges:
 #     - TYPE=ID # e.g. person=John_Doe, project=project1 (no spaces)
       
-- id: bazzano_2021
+- id: Bazzano_2021
   date:  2021-09-21
   pmid:  34263309
   pmcid: null
@@ -42,10 +42,10 @@
   url: null
   abstract: adflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjas adflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjasadflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjasadflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjasadflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjasadflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjas  
   badges:
-    - person=Dominic_Bazzano
-    - resource=cell_protocol
+    - person=Postdoc_Fellow
+    - resource=Cell_Prep_Protocol
 
-- id: park_2020
+- id: Park_2020
   date:  2020-07-15
   pmid:  34181717
   pmcid: PMC8287918
@@ -64,4 +64,4 @@
   url: null 
   badges: 
     - funding=My_R01
-    - project=project1
+    - project=Research_Project_1
